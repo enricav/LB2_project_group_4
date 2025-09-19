@@ -15,7 +15,7 @@ Data size in detail
     <th></th>
     <th>Unfiltered</th>
     <th>Filtered</th>
-    <th>TM Helix</th>
+    <th>TM Helical Proteins</th>
   </tr>
   <tr>
     <th>Positive</th>
@@ -27,6 +27,6 @@ Data size in detail
     <th>Negative</th>
     <td>20615</td>
     <td>20615</td>
-    <td>3753</td>
+    <td>1384</td>
   </tr>
 </table>
