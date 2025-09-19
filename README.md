@@ -15,15 +15,18 @@ Data size in detail
     <th></th>
     <th>Unfiltered</th>
     <th>Filtered</th>
+    <th>TM Helix</th>
   </tr>
   <tr>
     <th>Positive</th>
     <td>2949</td>
     <td>2932</td>
+    <td>/</td>
   </tr>
   <tr>
     <th>Negative</th>
     <td>20615</td>
     <td>20615</td>
+    <td>3753</td>
   </tr>
 </table>
