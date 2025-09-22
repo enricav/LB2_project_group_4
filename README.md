@@ -46,6 +46,7 @@ To construct a preliminary negative dataset, we will apply the following selecti
 `((cc_scl_term_exp:SL-0091) OR (cc_scl_term_exp:SL-0191) OR (cc_scl_term_exp:SL-0173) OR (cc_scl_term_exp:SL-0209) OR (cc_scl_term_exp:SL-0204) OR (cc_scl_term_exp:SL-0039))`
 
 After the selection step, both the positive and the negative datasets must be further filtered and then stored in two different formats.
+
 The first format is a TSV file, which summarizes the most relevant information about the proteins included in each dataset. The reported fields differ between positive and negative datasets.
 
 For the positive dataset, the TSV file [sp_positive.tsv](Data_collection/sp_positive.fasta) will include:
