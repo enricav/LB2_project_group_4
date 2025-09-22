@@ -29,6 +29,7 @@ To build a preliminary positive dataset, we will apply the following selection c
 * select proteins longer than 40 amino acids `length:[40 TO ]`
 *	restrict to reviewed (Swiss-Prot) entries `reviewed:true`
 *	retain proteins with experimentally validated signal peptides
+
 Additionally, in our script [data_collection.ipynb](Data_collection/data_collection.ipynb) we will further refine the dataset by keeping only:
 * proteins with signal peptides longer than 14 amino acids
 *	entries with protein-level evidence
