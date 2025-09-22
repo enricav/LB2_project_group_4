@@ -1,6 +1,6 @@
 # LB2_project_group_4
 Laboratory of Bioinformatics 2 - group project \
-The members of the group are: Andrea Pusiol, Aurora Mazzoni, Perla Lucaboni and Enrica Cavallo.\\
+The members of the group are: Andrea Pusiol, Aurora Mazzoni, Perla Lucaboni and Enrica Cavallo.
 
 The steps of the project are: 
 * Data collection: retrieve relevant datasets from UniProtKB.
