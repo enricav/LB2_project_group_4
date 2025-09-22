@@ -68,22 +68,6 @@ The second format is a FASTA file which reports the protein sequences.
 - [sp_negative.fasta](Data_collection/sp_negative.fasta): FASTA file for the negative dataset 
 
 
-
-
-
-
-
-
-
-
-
-The [data_collection.ipynb](Data_collection/data_collection.ipynb) script provides TSV and FASTA files for both positive and negative data, containing all preliminary data.\
-More in detail, these 4 output files are generated:
-* sp_positive.fasta
-* sp_positive.tsv
-* sp_negative.fasta
-* sp_negative.tsv
-
 Retrieved data in detail :
 
 <table>
@@ -107,8 +91,4 @@ Retrieved data in detail :
   </tr>
 </table>
 
-The results are displayied in the following files :
-- [sp_positive.fasta](Data_collection/sp_positive.fasta): FASTA file for the positive dataset 
-- [sp_positive.tsv](Data_collection/sp_positive.fasta): .tsv file for the positive dataset 
-- [sp_negative.fasta](Data_collection/sp_negative.fasta): FASTA file for the negative dataset 
-- [sp_negative.tsv](Data_collection/sp_negative.tsv): .tsv file for the negative dataset 
+
