@@ -30,3 +30,9 @@ Data size in detail
     <td>1384</td>
   </tr>
 </table>
+
+The results are displayied in the following files :
+- [sp_positive.fasta](Data_collection/sp_positive.fasta): FASTA file for the positive dataset 
+- [sp_positive.tsv](Data_collection/sp_positive.fasta): .tsv file for the positive dataset 
+- [sp_negative.fasta](Data_collection/sp_negative.fasta): FASTA file for the negative dataset 
+- [sp_negative.tsv](Data_collection/sp_negative.tsv): .tsv file for the negative dataset 
