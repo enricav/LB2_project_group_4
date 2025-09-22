@@ -1,6 +1,17 @@
 # LB2_project_group_4
 Laboratory of Bioinformatics 2 - group project \
-The members of the group are: Andrea Pusiol, Aurora Mazzoni, Perla Lucaboni and Enrica Cavallo.
+The members of the group are: Andrea Pusiol, Aurora Mazzoni, Perla Lucaboni and Enrica Cavallo.\\
+
+The steps of the project are: 
+* Data collection: retrieve relevant datasets from UniProtKB.
+* Data pre-processing: preprocess datasets for cross-validation and benchmarking.
+* Analyze and visualize dataset statistics.
+* Extract relevant features for classification.
+* Implement von Heijne’s algorithm and the SVM classifier.
+* Evaluate methods using cross-validation and a blind test set.
+* Discuss and report results.
+* (Optional) Extend the project with additional predictive methods.
+* Prepare a manuscript in the format of a scientific article.
 
 
 
