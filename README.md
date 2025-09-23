@@ -103,13 +103,13 @@ Retrieved data in detail :
   </tr>
   <tr>
     <th>Positive</th>
-    <td>2949</td>
     <td>2932</td>
+    <td>1092</td>
   </tr>
   <tr>
     <th>Negative</th>
     <td>20615</td>
-    <td>20615</td>
+    <td>8933</td>
   </tr>
 </table>
 
