@@ -1,4 +1,4 @@
-protein_id	organism_name	kingdom	protein_length	tm_helix_presence
+protein_id	organism_name	kingdom	protein_length	TM_helix_presence
 Q6YN16	Homo sapiens	Metazoa	418	False
 Q9UHK6	Homo sapiens	Metazoa	382	False
 A3KMH1	Homo sapiens	Metazoa	1905	False
