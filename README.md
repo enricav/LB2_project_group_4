@@ -104,12 +104,12 @@ Retrieved data in detail :
   <tr>
     <th>Positive</th>
     <td>2932</td>
-    <td>1092</td>
+    <td>1093</td>
   </tr>
   <tr>
     <th>Negative</th>
     <td>20615</td>
-    <td>8933</td>
+    <td>8934</td>
   </tr>
 </table>
 
