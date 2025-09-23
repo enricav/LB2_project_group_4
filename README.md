@@ -93,4 +93,28 @@ Retrieved data in detail :
   </tr>
 </table>
 
+# Data Preparation
+
+<table>
+  <tr>
+    <th></th>
+    <th>Total</th>
+    <th>Cluster representative</th>
+  </tr>
+  <tr>
+    <th>Positive</th>
+    <td>2949</td>
+    <td>2932</td>
+  </tr>
+  <tr>
+    <th>Negative</th>
+    <td>20615</td>
+    <td>20615</td>
+  </tr>
+</table>
+
+
+
+
+
 
