@@ -80,10 +80,12 @@ Retrieved data in detail :
 
 # Data Preparation
 
-|             | Total | Cluster representative |
-|:-----------:|:-----:|:----------------------:|
-| **Positive**| 2932  | 1093                   |
-| **Negative**| 20615 | 8934                   |
+| **Dataset**   | Positive | Negative |
+|:-----------------------:|:--------:|:--------:|
+| **Before Clustering**   |   2932   |  20615   |
+| **Cluster representatives** |  1093   |   8934   |
+| **Training**            |     875     |     7147     |
+| **Test**                |     218     |     1787     |
 
 
 
