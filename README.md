@@ -72,46 +72,18 @@ The second format is a FASTA file which reports the protein sequences.
 
 Retrieved data in detail :
 
-<table>
-  <tr>
-    <th></th>
-    <th>Unfiltered</th>
-    <th>Filtered</th>
-    <th>TM Helical Proteins</th>
-  </tr>
-  <tr>
-    <th>Positive</th>
-    <td>2949</td>
-    <td>2932</td>
-    <td>/</td>
-  </tr>
-  <tr>
-    <th>Negative</th>
-    <td>20615</td>
-    <td>20615</td>
-    <td>1384</td>
-  </tr>
-</table>
+|             | Unfiltered | Filtered | TM Helical Proteins |
+|:-----------:|:----------:|:--------:|:-------------------:|
+| **Positive**|   2949     |   2932   |         /           |
+| **Negative**|  20615     |  20615   |        1384         |
+
 
 # Data Preparation
 
-<table>
-  <tr>
-    <th></th>
-    <th style="text-align:center" > Total</th>
-    <th style="text-align:center" >Cluster representative</th>
-  </tr>
-  <tr>
-    <th style="text-align:center" >Positive</th>
-    <td style="text-align:center" >2932</td>
-    <td style="text-align:center" >1093</td>
-  </tr>
-  <tr>
-    <th style="text-align:center" >Negative</th>
-    <td style="text-align:center" >20615</td>
-    <td style="text-align:center" >8934</td>
-  </tr>
-</table>
+|             | Total | Cluster representative |
+|:-----------:|:-----:|:----------------------:|
+| **Positive**| 2932  | 1093                   |
+| **Negative**| 20615 | 8934                   |
 
 
 
