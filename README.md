@@ -98,18 +98,18 @@ Retrieved data in detail :
 <table>
   <tr>
     <th></th>
-    <th>Total</th>
-    <th>Cluster representative</th>
+    <th style="text-align:center" > Total</th>
+    <th style="text-align:center" >Cluster representative</th>
   </tr>
   <tr>
-    <th>Positive</th>
-    <td>2932</td>
-    <td>1093</td>
+    <th style="text-align:center" >Positive</th>
+    <td style="text-align:center" >2932</td>
+    <td style="text-align:center" >1093</td>
   </tr>
   <tr>
-    <th>Negative</th>
-    <td>20615</td>
-    <td>8934</td>
+    <th style="text-align:center" >Negative</th>
+    <td style="text-align:center" >20615</td>
+    <td style="text-align:center" >8934</td>
   </tr>
 </table>
 
