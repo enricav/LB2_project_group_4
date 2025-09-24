@@ -80,9 +80,9 @@ Retrieved data in detail :
 
 # Data Preparation
 
-Once preliminary data have been collected, we need to obtain non redundant datasets.
-We need to check for data leakage by clustering protein sequences (?) using MMSeqs2.
-More in detail we will check for proteins that satisfy these thresholds: >= 30% identity and >= 40% coverage.
+Once preliminary data have been collected, we need to obtain non redundant datasets. \
+We need to check for data leakage by clustering protein sequences (?) using MMSeqs2. \
+More in detail we will check for proteins that satisfy these thresholds: >= 30% identity and >= 40% coverage. \
 ```sh
 mmseqs easy-cluster input.fa cluster-results tmp --min-seq-id 0.3 \ -c 0.4 --cov-mode 0 --cluster-mode 1
 ```
@@ -96,23 +96,21 @@ Length coverage threshold: -c 0.4 (40% coverage)
 Coverage computation mode: --cov-mode 0 (coverage of query and target) 
 Clustering mode: --cluster-mode 1 (Connected component) 
 
-The output consists in 2 files : 
-Cluster-results_rep_seq.fasta → a FASTA file containing all the representative sequences, one for each found cluster. (positive, negative)
-Cluster-results_cluster.tsv → a TSV containing two columns: reports the ID id each sequence in the input file & reports the ID of the representative sequence identifying the cluster the sequence in column 1 has been assigned to. (positive, negative)
+The output consists in 2 files : \
+Cluster-results_rep_seq.fasta → a FASTA file containing all the representative sequences, one for each found cluster. ([positive](Data_preparation/cluster-results_positive_rep_seq.fasta), [negative](Data_preparation/cluster-results_negative_rep_seq.fasta)) \
+Cluster-results_cluster.tsv → a TSV containing two columns: reports the ID id each sequence in the input file & reports the ID of the representative sequence identifying the cluster the sequence in column 1 has been assigned to. ([positive](cluster-results_positive_cluster.tsv), [negative](Data_preparation/cluster-results_negative_cluster.tsv))
 
 
 Now the .fasta files containing only "unrelated" proteins will be used to split each dataset into two separate subsets:
 
-Training set: used to train the methods, optimize model hyperparameters and perform cross-validation experiments. 
+Training set: used to train the methods, optimize model hyperparameters and perform cross-validation experiments. \
 Test set: used to test the generalization performance of the different models. 
 
 For this purpose we developed the data_preparation.ipynb file, that takes as input:
 Cluster-results_rep_seq.fasta files
 sp_positive/negative.tsv files
 
-Output:
-Negative_set.tsv
-Positive_set.tsv
+Output: [Positive](positive_set.tsv) and [Negative](negative_set.tsv)
 
 
 | **Dataset**   | Positive | Negative |
