@@ -83,7 +83,7 @@ Retrieved data in detail :
 Once preliminary data have been collected, we need to obtain non redundant datasets. \
 We need to check for data leakage by clustering protein sequences (?) using MMSeqs2. \
 More in detail we will check for proteins that satisfy these thresholds: 
-# >= 30% identity and >= 40% coverage. \
+**>= 30% identity and >= 40% coverage. ** \
 ```sh
 mmseqs easy-cluster input.fa cluster-results tmp --min-seq-id 0.3 \ -c 0.4 --cov-mode 0 --cluster-mode 1
 ```
@@ -133,7 +133,9 @@ Specifically, we will produce the following graphs:
 
 * Comparative amino-acid composition of SPs against some background distribution
 
-* Taxonomic classification
+* Taxonomic classification, at kingdom and species level
+
+* Sequence logos of SP cleavage sites, extracting the cleavage-site motifs [-13,+2]. This is a typical representation of sequence conservation, starting from aligned sequences. The logo consist of a stack of letters for each aligned position, where the height of the entire stack informs you about the information content, while the height of each letter is proportional to its frequency at that position.
 
 
 
