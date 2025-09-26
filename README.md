@@ -83,19 +83,19 @@ Retrieved data in detail :
 Once preliminary data have been collected, we need to obtain non redundant datasets. \
 We need to check for data leakage by clustering protein sequences (?) using MMSeqs2. \
 More in detail we will check for proteins that satisfy these thresholds: 
-#>= 30% identity and >= 40% coverage. \
+# >= 30% identity and >= 40% coverage. \
 ```sh
 mmseqs easy-cluster input.fa cluster-results tmp --min-seq-id 0.3 \ -c 0.4 --cov-mode 0 --cluster-mode 1
 ```
 
 The options are: 
-*Input fasta file: input.fa 
-*Output clusters prefix: cluster-results 
-*Temporary folder: tmp, created in the same directory 
-*Percentage sequence identity threshold: --min-seq-id 0.3 (30% sequence identity) 
-*Length coverage threshold: -c 0.4 (40% coverage) 
-*Coverage computation mode: --cov-mode 0 (coverage of query and target) 
-*Clustering mode: --cluster-mode 1 (Connected component) 
+* Input fasta file: input.fa 
+* Output clusters prefix: cluster-results 
+* Temporary folder: tmp, created in the same directory 
+* Percentage sequence identity threshold: --min-seq-id 0.3 (30% sequence identity) 
+* Length coverage threshold: -c 0.4 (40% coverage) 
+* Coverage computation mode: --cov-mode 0 (coverage of query and target) 
+* Clustering mode: --cluster-mode 1 (Connected component) 
 
 The output consists in 2 files : \
 Cluster-results_rep_seq.fasta → a FASTA file containing all the representative sequences, one for each found cluster. ([positive](Data_preparation/cluster-results_positive_rep_seq.fasta), [negative](Data_preparation/cluster-results_negative_rep_seq.fasta)) \
@@ -122,18 +122,18 @@ Output: [Positive](positive_set.tsv) and [Negative](negative_set.tsv)
 | **Test**                |     218     |     1787     |
 
 
-#Data Description
+# Data Description
 
 At this point, we need to perform statistical analysis of the datasets, including distributions of different aspects of data, like compositions, taxonomy and SP lenght. This is usefull to avoid biases in the data. Furthermore, the results of these analysis will be represented using different types of plots, in order to describe the training and the benchmarking datasets indipendently.
 Specifically, we will produce the following graphs:
 
-*The distribution of protein lenghts, comparing positive and negative sequences
+* The distribution of protein lenghts, comparing positive and negative sequences
 
-*The distribution of SP lenghts
+* The distribution of SP lenghts
 
-*Comparative amino-acid composition of SPs against some background distribution
+* Comparative amino-acid composition of SPs against some background distribution
 
-*Taxonomic classification
+* Taxonomic classification
 
 
 
