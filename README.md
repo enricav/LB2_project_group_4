@@ -97,6 +97,12 @@ mmseqs easy-cluster input.fa cluster-results tmp --min-seq-id 0.3 \ -c 0.4 --cov
 
 Where:
 
+The `input.fa file` represents the initial dataset in FASTA format.
+
+The clustering results are saved with the prefix `cluster-results`.
+
+`tmp` is a temporary folder automatically created to store intermediate files during execution.
+
 `--min-seq-id 0.3` sets a minimum threshold of 30% sequence identity: this means that two sequences can be considered similar only if at least 30% of their residues are identical.
 
 `-c 0.4` imposes a coverage threshold of 40%, meaning that at least 40% of the sequence length must actually be aligned.
@@ -109,7 +115,7 @@ When we perform sequence clustering with MMSeqs2, we mainly obtain two output fi
 
 * The first is **cluster-results_rep_seq.fasta**, a FASTA file that contains all the representative sequences, one for each cluster identified. ([cluster-results_positive_rep_seq.fasta](Data_preparation/cluster-results_positive_rep_seq.fasta), [cluster-results_negative_rep_seq.fasta](Data_preparation/cluster-results_negative_rep_seq.fasta)) 
 
-* The second file is **cluster-results_cluster.tsv**, in tabular format. It contains two columns: in the first column, the ID of each original sequence from the input file is reported, while the second column shows the ID of the representative sequence of the cluster to which that sequence has been assigned. In this way, we obtain a kind of “map” that tells us, for each input sequence, which cluster it belongs to and what its representative is. ([positive](cluster-results_positive_cluster.tsv), [negative](Data_preparation/cluster-results_negative_cluster.tsv))
+* The second file is **cluster-results_cluster.tsv**, in tabular format. It contains two columns: in the first column, the ID of each original sequence from the input file is reported, while the second column shows the ID of the representative sequence of the cluster to which that sequence has been assigned. In this way, we obtain a kind of “map” that tells us, for each input sequence, which cluster it belongs to and what its representative is. ([cluster-results_positive_cluster.tsv](Data preparation/cluster-results_positive_cluster.tsv), [cluster-results_negative_cluster.tsv](Data_preparation/cluster-results_negative_cluster.tsv))
 
 Once redundancy has been removed, each dataset is divided into two distinct subsets:
 
