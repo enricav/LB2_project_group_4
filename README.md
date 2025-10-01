@@ -97,8 +97,11 @@ mmseqs easy-cluster input.fa cluster-results tmp --min-seq-id 0.3 \ -c 0.4 --cov
 
 Where:
 `--min-seq-id 0.3` sets a minimum threshold of 30% sequence identity: this means that two sequences can be considered similar only if at least 30% of their residues are identical.
+
 `-c 0.4` imposes a coverage threshold of 40%, meaning that at least 40% of the sequence length must actually be aligned.
+
 `--cov-mode 0` specifies that the coverage requirement must be satisfied for both the query sequence and the target sequence, i.e., in both directions.
+
 `--cluster-mode 1` selects the clustering algorithm, in this case the connected component mode, which builds clusters as sets of sequences connected to each other within a similarity network.
 
 
