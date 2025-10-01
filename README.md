@@ -144,6 +144,20 @@ Specifically, we will produce the following graphs:
 
 
 
+| **Metric**   | **Value** |
+|--------------|-----------|
+| Accuracy     |           |
+| Precision    |           |
+| Recall       |           |
+| F1 Score     |           |
+| MCC          |           |
+
+
+
+
+
+
+
 
 
 
