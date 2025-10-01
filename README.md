@@ -70,7 +70,7 @@ The second format is a FASTA file which reports the protein sequences.
 - [sp_negative.fasta](Data_collection/sp_negative.fasta): FASTA file for the negative dataset 
 
 
-Retrieved data in detail :
+In summary :
 
 |             | Unfiltered | Filtered | TM Helical Proteins |
 |:-----------:|:----------:|:--------:|:-------------------:|
@@ -136,6 +136,7 @@ To ensure traceability, the fold assignment of each protein was also recorded, s
 
 Output: [Positive](positive_set.tsv) and [Negative](negative_set.tsv)
 
+In summary:
 
 | **Dataset**   | Positive | Negative |
 |:-----------------------:|:--------:|:--------:|
