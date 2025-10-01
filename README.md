@@ -105,20 +105,18 @@ Where:
 
 `--cluster-mode 1` selects the clustering algorithm, in this case the connected component mode, which builds clusters as sets of sequences connected to each other within a similarity network.
 
+When we perform sequence clustering with MMSeqs2, we mainly obtain two output files:
 
-The output consists in 2 files : \
-Cluster-results_rep_seq.fasta → a FASTA file containing all the representative sequences, one for each found cluster. ([positive](Data_preparation/cluster-results_positive_rep_seq.fasta), [negative](Data_preparation/cluster-results_negative_rep_seq.fasta)) \
-Cluster-results_cluster.tsv → a TSV containing two columns: reports the ID id each sequence in the input file & reports the ID of the representative sequence identifying the cluster the sequence in column 1 has been assigned to. ([positive](cluster-results_positive_cluster.tsv), [negative](Data_preparation/cluster-results_negative_cluster.tsv))
+* The first is **cluster-results_rep_seq.fasta**, a FASTA file that contains all the representative sequences, one for each cluster identified. ([positive](Data_preparation/cluster-results_positive_rep_seq.fasta), [negative](Data_preparation/cluster-results_negative_rep_seq.fasta)) \
+
+* The second file is **cluster-results_cluster.tsv**, in tabular format. It contains two columns: in the first column, the ID of each original sequence from the input file is reported, while the second column shows the ID of the representative sequence of the cluster to which that sequence has been assigned. In this way, we obtain a kind of “map” that tells us, for each input sequence, which cluster it belongs to and what its representative is. ([positive](cluster-results_positive_cluster.tsv), [negative](Data_preparation/cluster-results_negative_cluster.tsv))
+
+Then, the training set of each reduced dataset is divided into 5 subsets.
+The split was performed randomly, while ensuring that each subset preserved the same ratio of positive and negative sequences as in the original dataset.
+This allows the implementation of 5-fold cross-validation, a procedure that enables training and validating the model multiple times, by iteratively using 4 folds for training and 1 fold for validation.
+To ensure traceability, the fold assignment of each protein was also recorded, so that the data partitioning can be clearly and transparently reconstructed.
 
 
-Now the .fasta files containing only "unrelated" proteins will be used to split each dataset into two separate subsets:
-
-Training set: used to train the methods, optimize model hyperparameters and perform cross-validation experiments. \
-Test set: used to test the generalization performance of the different models. 
-
-For this purpose we developed the data_preparation.ipynb file, that takes as input:
-Cluster-results_rep_seq.fasta files
-sp_positive/negative.tsv files
 
 Output: [Positive](positive_set.tsv) and [Negative](negative_set.tsv)
 
