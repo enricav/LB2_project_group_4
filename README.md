@@ -80,10 +80,17 @@ Retrieved data in detail :
 
 # Data Preparation
 
-Once preliminary data have been collected, we need to obtain non redundant datasets. \
-We need to check for data leakage by clustering protein sequences (?) using MMSeqs2. \
-More in detail we will check for proteins that satisfy these thresholds: 
-**>= 30% identity and >= 40% coverage. ** \
+Once the two preliminary datasets, positive and negative, have been obtained, they must be pre-processed in parallel.
+The first step is to remove redundant sequences from each dataset, in order to obtain non-redundant datasets.
+This procedure is essential for several reasons:
+* **Reduction of redundancy**: it prevents protein families or organisms that are overrepresented, as often happens in UniProt databases, from excessively biasing the model.
+* **Balanced dataset**: it ensures that each family, fold, or protein function has a more balanced weight, allowing for a more accurate and fair analysis.
+* **Prevention of data leakage**: by removing highly similar sequences, it avoids the risk that nearly identical copies end up in both the training and benchmarking sets, a situation that would lead to artificially inflated performance and an unrealistic evaluation of the model’s generalization ability.
+
+This is done through the process of sequence clustering, which groups sets of similar proteins using two fundamental parameters: sequence identity and alignment coverage. For two sequences to be considered part of the same cluster, both conditions must be satisfied.
+
+To perform this process, we use MMSeqs2, one of the most efficient tools for large-scale clustering. The program compares all sequences, groups them into clusters according to the chosen parameters, and selects a single representative for each cluster, thereby eliminating redundant sequences. The command to run sequence clustering with MMSeqs2 follows the general syntax:
+
 ```sh
 mmseqs easy-cluster input.fa cluster-results tmp --min-seq-id 0.3 \ -c 0.4 --cov-mode 0 --cluster-mode 1
 ```
