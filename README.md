@@ -111,7 +111,13 @@ When we perform sequence clustering with MMSeqs2, we mainly obtain two output fi
 
 * The second file is **cluster-results_cluster.tsv**, in tabular format. It contains two columns: in the first column, the ID of each original sequence from the input file is reported, while the second column shows the ID of the representative sequence of the cluster to which that sequence has been assigned. In this way, we obtain a kind of “map” that tells us, for each input sequence, which cluster it belongs to and what its representative is. ([positive](cluster-results_positive_cluster.tsv), [negative](Data_preparation/cluster-results_negative_cluster.tsv))
 
-Then, the training set of each reduced dataset is divided into 5 subsets.
+Once redundancy has been removed, each dataset is divided into two distinct subsets:
+
+* **Training set** (about 80% of the data), used to train the models, optimize hyperparameters, and perform cross-validation experiments.
+
+* **Benchmarking set** (about 20% of the data), used exclusively in the final step to evaluate the model’s generalization ability.
+
+Finally, the training set of each reduced dataset is divided into 5 subsets.
 The split was performed randomly, while ensuring that each subset preserved the same ratio of positive and negative sequences as in the original dataset.
 This allows the implementation of 5-fold cross-validation, a procedure that enables training and validating the model multiple times, by iteratively using 4 folds for training and 1 fold for validation.
 To ensure traceability, the fold assignment of each protein was also recorded, so that the data partitioning can be clearly and transparently reconstructed.
