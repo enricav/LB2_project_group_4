@@ -107,7 +107,7 @@ Where:
 
 When we perform sequence clustering with MMSeqs2, we mainly obtain two output files:
 
-* The first is **cluster-results_rep_seq.fasta**, a FASTA file that contains all the representative sequences, one for each cluster identified. ([positive](Data_preparation/cluster-results_positive_rep_seq.fasta), [negative](Data_preparation/cluster-results_negative_rep_seq.fasta)) \
+* The first is **cluster-results_rep_seq.fasta**, a FASTA file that contains all the representative sequences, one for each cluster identified. ([cluster-results_positive_rep_seq.fasta](Data_preparation/cluster-results_positive_rep_seq.fasta), [cluster-results_negative_rep_seq.fasta](Data_preparation/cluster-results_negative_rep_seq.fasta)) 
 
 * The second file is **cluster-results_cluster.tsv**, in tabular format. It contains two columns: in the first column, the ID of each original sequence from the input file is reported, while the second column shows the ID of the representative sequence of the cluster to which that sequence has been assigned. In this way, we obtain a kind of “map” that tells us, for each input sequence, which cluster it belongs to and what its representative is. ([positive](cluster-results_positive_cluster.tsv), [negative](Data_preparation/cluster-results_negative_cluster.tsv))
 
