@@ -78,6 +78,10 @@ Retrieved data in detail :
 | **Negative**|  20615     |  20615   |        1384         |
 
 
+
+
+
+
 # Data Preparation
 
 Once the two preliminary datasets, positive and negative, have been obtained, they must be pre-processed in parallel.
@@ -141,6 +145,10 @@ Output: [Positive](positive_set.tsv) and [Negative](negative_set.tsv)
 | **Test**                |     218     |     1787     |
 
 
+
+
+
+
 # Data Description
 
 At this point, we need to perform statistical analysis of the datasets, including distributions of different aspects of data, like compositions, taxonomy and SP lenght. This is usefull to avoid biases in the data. Furthermore, the results of these analysis will be represented using different types of plots, in order to describe the training and the benchmarking datasets indipendently.
@@ -158,9 +166,10 @@ Specifically, we will produce the following graphs:
 
 
 
+
+
+
 # VonHeijne method
-
-
 
 
 | **Metric**   | **Value** |
