@@ -95,14 +95,12 @@ To perform this process, we use MMSeqs2, one of the most efficient tools for lar
 mmseqs easy-cluster input.fa cluster-results tmp --min-seq-id 0.3 \ -c 0.4 --cov-mode 0 --cluster-mode 1
 ```
 
-The options are: 
-* Input fasta file: input.fa 
-* Output clusters prefix: cluster-results 
-* Temporary folder: tmp, created in the same directory 
-* Percentage sequence identity threshold: --min-seq-id 0.3 (30% sequence identity) 
-* Length coverage threshold: -c 0.4 (40% coverage) 
-* Coverage computation mode: --cov-mode 0 (coverage of query and target) 
-* Clustering mode: --cluster-mode 1 (Connected component) 
+Where:
+`--min-seq-id 0.3` sets a minimum threshold of 30% sequence identity: this means that two sequences can be considered similar only if at least 30% of their residues are identical.
+`-c 0.4` imposes a coverage threshold of 40%, meaning that at least 40% of the sequence length must actually be aligned.
+`--cov-mode 0` specifies that the coverage requirement must be satisfied for both the query sequence and the target sequence, i.e., in both directions.
+`--cluster-mode 1` selects the clustering algorithm, in this case the connected component mode, which builds clusters as sets of sequences connected to each other within a similarity network.
+
 
 The output consists in 2 files : \
 Cluster-results_rep_seq.fasta → a FASTA file containing all the representative sequences, one for each found cluster. ([positive](Data_preparation/cluster-results_positive_rep_seq.fasta), [negative](Data_preparation/cluster-results_negative_rep_seq.fasta)) \
