@@ -150,7 +150,7 @@ In summary:
 
 
 
-# Data Description
+# Data Analysis
 
 At this point, we need to perform statistical analysis of the datasets, including distributions of different aspects of data, like compositions, taxonomy and SP lenght. This is usefull to avoid biases in the data. Furthermore, the results of these analysis will be represented using different types of plots, in order to describe the training and the benchmarking datasets indipendently.
 Specifically, we will produce the following graphs:
