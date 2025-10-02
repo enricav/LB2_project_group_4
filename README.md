@@ -134,7 +134,7 @@ To ensure traceability, the fold assignment of each protein was also recorded, s
 
 
 
-Output: [Positive](positive_set.tsv) and [Negative](negative_set.tsv)
+Output: [Positive](Data_preparation/positive_set.tsv) and [Negative](Data_preparation/negative_set.tsv)
 
 In summary:
 
