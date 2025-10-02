@@ -180,6 +180,8 @@ Specifically, we will produce the following graphs:
 | Recall       | 0.6023 ± 0.0198      |
 | F1 Score     | 0.6743 ± 0.0132      |
 | MCC          | 0.6454 ± 0.0155      |
+| Threshold    | 9.2161 ± 2.6279      |
+
 
 
 
