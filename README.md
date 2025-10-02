@@ -173,13 +173,13 @@ Specifically, we will produce the following graphs:
 # VonHeijne method
 
 
-| **Metric**   | **Value** |
-|--------------|-----------|
-| Accuracy     |           |
-| Precision    |           |
-| Recall       |           |
-| F1 Score     |           |
-| MCC          |           |
+| **Metric**   |      **Value**       |
+|------------- |----------------------|
+| Accuracy     | 0.936  ± 0.0032      |
+| Precision    | 0.7671 ± 0.0311      |
+| Recall       | 0.6023 ± 0.0198      |
+| F1 Score     | 0.6743 ± 0.0132      |
+| MCC          | 0.6454 ± 0.0155      |
 
 
 
