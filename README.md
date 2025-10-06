@@ -152,18 +152,31 @@ In summary:
 
 # Data Analysis
 
-At this point, we need to perform statistical analysis of the datasets, including distributions of different aspects of data, like compositions, taxonomy and SP lenght. This is usefull to avoid biases in the data. Furthermore, the results of these analysis will be represented using different types of plots, in order to describe the training and the benchmarking datasets indipendently.
-Specifically, we will produce the following graphs:
+The main operations of this phase are:
 
-* The distribution of protein lenghts, comparing positive and negative sequences
+- importing the positive and negative datasets;
 
-* The distribution of SP lenghts
+- adding labels to distinguish positive and negative sequences;
 
-* Comparative amino-acid composition of SPs against some background distribution
+- checking the uniqueness of protein identifiers;;
 
-* Taxonomic classification, at kingdom and species level
+- setting `protein_id` as the index of the tables;
 
-* Sequence logos of SP cleavage sites, extracting the cleavage-site motifs [-13,+2]. This is a typical representation of sequence conservation, starting from aligned sequences. The logo consist of a stack of letters for each aligned position, where the height of the entire stack informs you about the information content, while the height of each letter is proportional to its frequency at that position.
+- renaming the  `class ` column to  `dataset_class ` to distinguish training and test;
+
+- concatenating the two datasets into a single dataframe;
+  
+- final separation into training and test datasets based on the `dataset_class` column.
+
+Once the dataset has been structured, before using it to train predictive models it is essential to carry out a preliminary statistical analysis. The purpose of this step is to verify that the available data are of adequate quality, balanced, and truly representative of the biological phenomenon we are going to study.
+
+The first step consists of computing basic statistics on the training and benchmark datasets. This includes measuring values such as mean, median, standard deviation, protein length distributions, or amino acid frequencies. These indicators provide a quantitative overview of the dataset and help identify potential anomalies, imbalances, or outliers.
+
+Next, it is necessary to assess the adequacy of the dataset with respect to the goals of the analysis. One must ask whether the number of sequences is sufficient, whether the positive and negative classes are well balanced, and whether the categories of interest (organisms, functions, lengths) are properly represented. This verification is crucial to ensure that the trained models can produce reliable results that are not biased by partitioning artifacts.
+
+Finally, it is important to demonstrate that the datasets represent a true “snapshot” of the real protein space. In other words, the data should reflect the variability and the typical features of natural proteins, without being limited or distorted by the way they were extracted. Only datasets that faithfully capture biological diversity can lead to generalizable and biologically meaningful results.
+
+To achieve these objectives, several descriptive plots are generated:
 
 
 
