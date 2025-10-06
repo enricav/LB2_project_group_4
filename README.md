@@ -170,12 +170,6 @@ The main operations of this phase are:
 
 Once the dataset has been structured, before using it to train predictive models it is essential to carry out a preliminary statistical analysis. The purpose of this step is to verify that the available data are of adequate quality, balanced, and truly representative of the biological phenomenon we are going to study.
 
-The first step consists of computing basic statistics on the training and benchmark datasets. This includes measuring values such as mean, median, standard deviation, protein length distributions, or amino acid frequencies. These indicators provide a quantitative overview of the dataset and help identify potential anomalies, imbalances, or outliers.
-
-Next, it is necessary to assess the adequacy of the dataset with respect to the goals of the analysis. One must ask whether the number of sequences is sufficient, whether the positive and negative classes are well balanced, and whether the categories of interest (organisms, functions, lengths) are properly represented. This verification is crucial to ensure that the trained models can produce reliable results that are not biased by partitioning artifacts.
-
-Finally, it is important to demonstrate that the datasets represent a true “snapshot” of the real protein space. In other words, the data should reflect the variability and the typical features of natural proteins, without being limited or distorted by the way they were extracted. Only datasets that faithfully capture biological diversity can lead to generalizable and biologically meaningful results.
-
 To achieve these objectives, several descriptive plots are generated:
 
 - We examined the **distribution of protein lengths** , comparing the positive dataset (proteins with signal peptides, secretory pathway) and the negative dataset (proteins without signal peptides). The data were visualized as normalized histograms with overlaid density curves, shown separately for the training set and the test set.
@@ -187,7 +181,10 @@ The aim of this analysis is to investigate whether signal peptides show recurrin
 As the plots show, most signal peptides fall within a relatively narrow length range of about 15–30 residues, with a peak around 20 residues, while longer sequences are much less frequent. This confirms that SPs have a characteristic size, which can guide the definition of sequence windows for model training.
 By displaying both training and test sets, we also confirm that the two subsets exhibit consistent distributions, ensuring that the benchmark set remains representative of the overall dataset.
 
-
+- Another important step of the analysis concerned the **amino acid composition of signal peptides**. For each sequence in the positive dataset, residues were counted up to the cleavage site and their frequencies were normalized to obtain the average amino acid distribution of SPs.
+ This distribution was then compared with a reference background, represented by the general amino acid composition of proteins in SwissProt. The comparison was visualized through combined barplots, showing side-by-side the frequencies observed in the training and test sets of SPs against the reference values.
+The goal of this analysis is to detect possible enrichments or depletions of specific amino acids in signal peptides compared to general proteins. For instance, certain classes of residues — such as hydrophobic, polar, or charged amino acids — may appear over-represented or under-represented in SPs.
+Such differences are biologically meaningful because they highlight the characteristic properties of signal peptides and suggest which sequence features might be exploited as discriminative signals in predictive models.
 
 
 
