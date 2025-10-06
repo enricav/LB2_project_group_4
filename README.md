@@ -3,9 +3,12 @@
 The members of the group are: Andrea Pusiol, Aurora Mazzoni, Perla Lucaboni and Enrica Cavallo.
 
 The steps of the project are: 
-* Data collection: retrieve relevant datasets from UniProtKB.
-* Data pre-processing: preprocess datasets for cross-validation and benchmarking.
-* Analyze and visualize dataset statistics.
+
+1) Data collection: retrieve relevant datasets from UniProtKB.
+
+2) Data pre-processing: preprocess datasets for cross-validation and benchmarking.
+
+3) Analyze and visualize dataset statistics.
 * Extract relevant features for classification.
 * Implement von Heijne’s algorithm and the SVM classifier.
 * Evaluate methods using cross-validation and a blind test set.
@@ -15,7 +18,7 @@ The steps of the project are:
 
 
 
-# Data Collection
+#  1) Data Collection
 Our objective is to collect datasets that can be used to train predictive methods for identifying the presence of signal peptides in proteins.
 For this project, we will restrict our analysis to eukaryotic proteins, deliberately excluding bacterial and archaeal sequences.
 To this end, we require two types of datasets:
@@ -82,7 +85,7 @@ In summary :
 
 
 
-# Data Preparation
+# 2) Data Preparation
 
 Once the two preliminary datasets, positive and negative, have been obtained, they must be pre-processed in parallel.
 The first step is to remove redundant sequences from each dataset, in order to obtain non-redundant datasets.
@@ -150,7 +153,7 @@ In summary:
 
 
 
-# Data Analysis
+# 3) Data Analysis
 
 The main operations of this phase are:
 
@@ -183,7 +186,7 @@ By displaying both training and test sets, we also confirm that the two subsets 
 
 - Another important step of the analysis concerned the **amino acid composition of signal peptides**. For each sequence in the positive dataset, residues were counted up to the cleavage site and their frequencies were normalized to obtain the average amino acid distribution of SPs.
  This distribution was then compared with a reference background, represented by the general amino acid composition of proteins in SwissProt. The comparison was visualized through combined barplots, showing side-by-side the frequencies observed in the training and test sets of SPs against the reference values.
-The goal of this analysis is to detect possible enrichments or depletions of specific amino acids in signal peptides compared to general proteins. For instance, certain classes of residues — such as hydrophobic, polar, or charged amino acids — may appear over-represented or under-represented in SPs.
+The goal of this analysis is to detect possible enrichments or depletions of specific amino acids in signal peptides compared to general proteins. For instance, certain classes of residues (such as hydrophobic, polar, or charged amino acids) may appear over-represented or under-represented in SPs.
 Such differences are biologically meaningful because they highlight the characteristic properties of signal peptides and suggest which sequence features might be exploited as discriminative signals in predictive models.
 
 
