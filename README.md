@@ -178,6 +178,10 @@ Finally, it is important to demonstrate that the datasets represent a true “sn
 
 To achieve these objectives, several descriptive plots are generated:
 
+- We examined the **distribution of protein lengths** , comparing the positive dataset (proteins with signal peptides, secretory pathway) and the negative dataset (proteins without signal peptides). The data were visualized as normalized histograms with overlaid density curves, shown separately for the training set and the test set.
+The goal of this step was twofold. On one side, it allows us to assess whether protein length could serve as a discriminative feature between secretory and non-secretory proteins. If consistent differences are observed between positive and negative distributions, this property might contribute useful information to classification models. On the other hand, if the two distributions largely overlap, protein length is unlikely to represent a strong predictive feature.
+By plotting the training and test sets separately, we also ensure that the data split did not introduce any bias. The distributions appear consistent across the two subsets, confirming that the benchmark set is representative of the same underlying data space as the training set.
+
 
 
 
