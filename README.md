@@ -158,7 +158,7 @@ The main operations of this phase are:
 
 - adding labels to distinguish positive and negative sequences;
 
-- checking the uniqueness of protein identifiers;;
+- checking the uniqueness of protein identifiers;
 
 - setting `protein_id` as the index of the tables;
 
@@ -181,6 +181,12 @@ To achieve these objectives, several descriptive plots are generated:
 - We examined the **distribution of protein lengths** , comparing the positive dataset (proteins with signal peptides, secretory pathway) and the negative dataset (proteins without signal peptides). The data were visualized as normalized histograms with overlaid density curves, shown separately for the training set and the test set.
 The goal of this step was twofold. On one side, it allows us to assess whether protein length could serve as a discriminative feature between secretory and non-secretory proteins. If consistent differences are observed between positive and negative distributions, this property might contribute useful information to classification models. On the other hand, if the two distributions largely overlap, protein length is unlikely to represent a strong predictive feature.
 By plotting the training and test sets separately, we also ensure that the data split did not introduce any bias. The distributions appear consistent across the two subsets, confirming that the benchmark set is representative of the same underlying data space as the training set.
+
+- Another key step of the analysis was the **distribution of signal peptide lengths**. This property was examined using normalized histograms with overlaid density curves, shown separately for the training set and the test set.
+The aim of this analysis is to investigate whether signal peptides show recurring length patterns and to detect potential anomalies. Understanding the typical SP length is crucial, since this region of the protein is the one from which we will later extract features for predictive modeling.
+As the plots show, most signal peptides fall within a relatively narrow length range of about 15–30 residues, with a peak around 20 residues, while longer sequences are much less frequent. This confirms that SPs have a characteristic size, which can guide the definition of sequence windows for model training.
+By displaying both training and test sets, we also confirm that the two subsets exhibit consistent distributions, ensuring that the benchmark set remains representative of the overall dataset.
+
 
 
 
