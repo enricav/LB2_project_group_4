@@ -173,7 +173,7 @@ Specifically, we will produce the following graphs:
 # VonHeijne method
 
 
-| **Metric**   |      **Value**       |
+| **Metric**   |      **Mean ± SE**       |
 |------------- |----------------------|
 | Accuracy     | 0.936  ± 0.0032      |
 | Precision    | 0.7671 ± 0.0311      |
