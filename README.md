@@ -202,6 +202,49 @@ The resulting logos allowed us to detect conserved sequence patterns around SP c
 
 # VonHeijne method
 
+The Von Heijne method is one of the first statistical approaches developed for the prediction of signal peptide cleavage sites in secretory proteins.
+It is based on the observation that, around the point where the signal peptidase performs cleavage, there are conserved sequence motifs: specific amino acid patterns that recur across different proteins.
+Certain positions tend to contain specific residues more frequently than others, creating a characteristic statistical profile that can be modeled.
+
+To quantitatively describe these position-specific patterns, Von Heijne introduced the Position-Specific Scoring Matrix (PSSM), which reports, for each position relative to the cleavage site, the relative frequency of all 20 amino acids.
+These observed frequencies are compared against a background distribution (the overall amino acid composition of the SwissProt database). This comparison identifies statistically enriched or depleted amino acids near the cleavage site, forming a model that can recognize similar motifs in new sequences.
+
+
+The algorithm was implemented in Python following the original parameters described by Von Heijne:
+
+- **Cleavage-site context**: sequence window from –13 to +2 relative to the cleavage position (0). This window includes the terminal portion of the h-region and the c-region, where cleavage occurs.
+
+- **Pseudocounts**: a value of 1 (Laplace smoothing) is added to each amino acid count to avoid zero frequencies.
+
+- **Background model**: amino acid frequencies are derived from the SwissProt database.
+
+- **Threshold selection**: the classification threshold is cross-validated and optimized via the Precision–Recall curve, choosing the point that maximizes the F1-score.
+​
+
+PIPELINE:
+
+1. **Dataset preparation** : Import positive and negative protein sets, merge them into a unified DataFrame indexed by protein_id.
+2. **Sequence and motif extraction** : Read protein sequences and cleavage motifs from FASTA files and link them to their respective identifiers.
+3. **Matrix generation (PSSM)** : Build a position-specific scoring matrix from the positive motifs. Each matrix cell contains the log-odds score of observing an amino acid at a given position relative to the background frequencies.
+4. **Scoring of new sequences**: Slide the motif window along each sequence to compute a cumulative score at every position. The maximum window score represents the most probable cleavage site within the sequence.
+5. **Threshold estimation**: Determine the optimal classification threshold by maximizing the F1-score using the Precision–Recall curve.
+6. **Classification and evaluation**: Classify sequences as Positive or Negative based on the threshold and compare predictions with true labels. Model performance is evaluated through Precision, Recall, F1-score, Accuracy, and MCC metrics.
+
+CROSS-VALIDATION
+
+To ensure model robustness, a k-fold cross-validation procedure was implemented. In each iteration:
+
+-The PSSM is generated using the training subset.
+
+-The optimal threshold is determined using the validation subset.
+
+-Model performance is evaluated on the testing subset.
+
+Metrics from each fold are then averaged to obtain an overall estimate of model accuracy and stability.
+
+RESULTS:
+
+Average cross-validation performance shows consistent and stable results across folds:
 
 | **Metric**   |      **Mean ± SE**       |
 |------------- |----------------------|
