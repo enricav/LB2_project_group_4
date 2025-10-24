@@ -200,7 +200,7 @@ The resulting logos allowed us to detect conserved sequence patterns around SP c
 
 
 
-# VonHeijne method
+# 4) VonHeijne method
 
 The Von Heijne method is one of the first statistical approaches developed for the prediction of signal peptide cleavage sites in secretory proteins.
 It is based on the observation that, around the point where the signal peptidase performs cleavage, there are conserved sequence motifs: specific amino acid patterns that recur across different proteins.
@@ -254,6 +254,25 @@ Average cross-validation performance shows consistent and stable results across 
 | F1 Score     | 0.6743 ± 0.0132      |
 | MCC          | 0.6454 ± 0.0155      |
 | Threshold    | 9.2161 ± 2.6279      |
+
+
+
+
+# 5) SVM method
+
+| Metric       | Baseline (Mean ± SE) | Elastic Net (Mean ± SE) | Random Forest (Mean ± SE) |
+|------------- |----------------------|----------------------|----------------------|
+| Accuracy     | 0.9666  ± 0.0016     | 0.9616   ± 0.0027    | 0.962   ± 0.0057     |
+| Precision    | 0.8424 ± 0.0123      | 0.8199  ± 0.0165     | 0.8338  ± 0.0272     |
+| Recall       | 0.8537 ± 0.0149      | 0.8309  ± 0.0216     | 0.8137  ± 0.0261     |
+| F1 Score     | 0.8479 ± 0.0072      | 0.8252  ± 0.0.0131   | 0.8236  ± 0.0263     |
+| MCC          | 0.8292 ± 0.0081      | 0.8037  ± 0.0146     | 0.8024  ± 0.0295     |
+
+
+
+
+
+
 
 
 
