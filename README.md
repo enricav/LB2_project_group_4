@@ -9,12 +9,15 @@ The steps of the project are:
 2) Data pre-processing: preprocess datasets for cross-validation and benchmarking.
 
 3) Analyze and visualize dataset statistics.
-* Extract relevant features for classification.
-* Implement von Heijne’s algorithm and the SVM classifier.
-* Evaluate methods using cross-validation and a blind test set.
-* Discuss and report results.
-* (Optional) Extend the project with additional predictive methods.
-* Prepare a manuscript in the format of a scientific article.
+
+4) Implement von Heijne’s algorithm
+
+5) Extract relevant features and implement the SVM classifier.
+
+6) Evaluate methods using cross-validation and a blind test set.
+
+7) (Optional) Extend the project with additional predictive methods.
+
 
 
 
@@ -262,11 +265,11 @@ Average cross-validation performance shows consistent and stable results across 
 
 | Metric       | Baseline (Mean ± SE) | Elastic Net (Mean ± SE) | Random Forest (Mean ± SE) |
 |------------- |----------------------|----------------------|----------------------|
-| Accuracy     | 0.9666  ± 0.0016     | 0.9616   ± 0.0027    | 0.962   ± 0.0057     |
-| Precision    | 0.8424 ± 0.0123      | 0.8199  ± 0.0165     | 0.8338  ± 0.0272     |
-| Recall       | 0.8537 ± 0.0149      | 0.8309  ± 0.0216     | 0.8137  ± 0.0261     |
-| F1 Score     | 0.8479 ± 0.0072      | 0.8252  ± 0.0.0131   | 0.8236  ± 0.0263     |
-| MCC          | 0.8292 ± 0.0081      | 0.8037  ± 0.0146     | 0.8024  ± 0.0295     |
+| Accuracy     | 0.9666  ± 0.0016     | 0.9616  ± 0.0027     | 0.9620  ± 0.0057     |
+| Precision    | 0.8424  ± 0.0123     | 0.8199  ± 0.0165     | 0.8338  ± 0.0272     |
+| Recall       | 0.8537  ± 0.0149     | 0.8309  ± 0.0216     | 0.8137  ± 0.0261     |
+| F1 Score     | 0.8479  ± 0.0072     | 0.8252  ± 0.0131     | 0.8236  ± 0.0263     |
+| MCC          | 0.8292  ± 0.0081     | 0.8037  ± 0.0146     | 0.8024  ± 0.0295     |
 
 
 
