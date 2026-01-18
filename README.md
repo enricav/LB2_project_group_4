@@ -6,13 +6,13 @@ The steps of the project are:
 
 1) Data collection: retrieve relevant datasets from UniProtKB.
 
-2) Data pre-processing: preprocess datasets for cross-validation and benchmarking.
+2) Data preparation: preprocessing datasets for cross-validation and benchmarking.
 
-3) Analyze and visualize dataset statistics.
+3) Data analysis: analyze and visualize dataset statistics.
 
-4) Implement von Heijne’s algorithm
+4) Von Heijne method: implement von Heijne’s algorithm
 
-5) Extract relevant features and implement the SVM classifier.
+5) SVM method: extract relevant features and implement the SVM classifier.
 
 6) Evaluate methods using cross-validation and a blind test set.
 
