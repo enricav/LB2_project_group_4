@@ -250,12 +250,12 @@ Average cross-validation performance shows consistent and stable results across 
 
 | **Metric**   |      **Mean ± SE**       |
 |------------- |----------------------|
-| Accuracy     | 0.936  ± 0.0032      |
-| Precision    | 0.7671 ± 0.0311      |
-| Recall       | 0.6023 ± 0.0198      |
-| F1 Score     | 0.6743 ± 0.0132      |
-| MCC          | 0.6454 ± 0.0155      |
-| Threshold    | 9.2161 ± 2.6279      |
+| Accuracy     | 0.9372 ± 0.0038      |
+| Precision    | 0.7701 ± 0.0264      |
+| Recall       | 0.6158 ± 0.0744      |
+| F1 Score     | 0.6816 ± 0.0356      |
+| MCC          | 0.6540 ± 0.0336      |
+| Threshold    | 8.6129 ± 3.1830      |
 
 
 
