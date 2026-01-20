@@ -16,7 +16,6 @@ The steps of the project are:
 
 6) Model evaluation: evaluate methods using cross-validation and a blind test set.
 
-7) (Optional) Extend the project with additional predictive methods.
 
 
 
